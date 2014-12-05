@@ -13,9 +13,9 @@ class Mountain:
         self.stream = WritelnDecorator(sys.stdout)
         self.lesson = Sensei(self.stream)
 
-    def walk_the_path(self, name="koans"):
+    def walk_the_path(self, name="koans", prefix="koans"):
         "Run the koans tests with a custom runner output."
-        self.tests = unittest.TestLoader().loadTestsFromName("koans." + name)
+        self.tests = unittest.TestLoader().loadTestsFromName("%(prefix)s.%(name)s" % {'name':name, 'prefix':prefix})
 
         self.tests(self.lesson)
         self.lesson.learn()
