@@ -4,8 +4,8 @@
 import unittest
 from libs.mock import *
 
-from runner.mountain import Mountain
-from runner import path_to_enlightenment
+from .mountain import Mountain
+from . import path_to_enlightenment
 
 class TestMountain(unittest.TestCase):
 

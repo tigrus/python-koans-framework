@@ -3,7 +3,7 @@
 
 import unittest
 
-from runner import helper
+from . import helper
 
 class TestHelper(unittest.TestCase):
 

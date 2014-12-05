@@ -1,6 +1,6 @@
 #!/bin/python
 import sys
-from runner.mountain import Mountain 
+from koans_suite.mountain import Mountain 
 
 def main(args=None):
 	if len(args) > 1:

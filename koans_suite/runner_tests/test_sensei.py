@@ -7,10 +7,10 @@ import re
 
 from libs.mock import *
 
-from runner.sensei import Sensei
-from runner.writeln_decorator import WritelnDecorator
-from runner.mockable_test_result import MockableTestResult
-from runner import path_to_enlightenment
+from .sensei import Sensei
+from .writeln_decorator import WritelnDecorator
+from .mockable_test_result import MockableTestResult
+from . import path_to_enlightenment
 
 class AboutParrots:
     pass
