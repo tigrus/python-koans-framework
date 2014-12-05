@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 import unittest
 import sys
 
-from . import path_to_enlightenment
 from .sensei import Sensei
 from .writeln_decorator import WritelnDecorator
 
@@ -15,7 +13,8 @@ class Mountain:
 
     def walk_the_path(self, name="koans", prefix="koans"):
         "Run the koans tests with a custom runner output."
-        self.tests = unittest.TestLoader().loadTestsFromName("%(prefix)s.%(name)s" % {'name':name, 'prefix':prefix})
+        n = "%(prefix)s.%(name)s" % {'name':name, 'prefix':prefix}
+        self.tests = unittest.TestLoader().loadTestsFromName(n)
 
         self.tests(self.lesson)
         self.lesson.learn()
